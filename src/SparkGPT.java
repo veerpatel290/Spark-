@@ -4,8 +4,9 @@ import org.json.*;
 import io.github.cdimascio.dotenv.Dotenv;
 
 public class SparkGPT {
-    private static final Dotenv dotenv = Dotenv.load();
-    private static final String API_KEY = dotenv.get("sk-proj-xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx");
+  private static final Dotenv dotenv = Dotenv.load();
+private static final String API_KEY = dotenv.get("OPENAI_API_KEY");
+
     private static final String API_URL = "https://api.openai.com/v1/chat/completions";
 
     public static void main(String[] args) throws IOException {
